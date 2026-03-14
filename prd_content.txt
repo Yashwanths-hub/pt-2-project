@@ -1,0 +1,125 @@
+Gym Injury Risk & Fatigue 
+Detection System
+Equipment -Level Real -Time Monitoring Hardware
+Protecting athletes through intelligent embedded systems that detect 
+fatigue before failure occurs —no cameras, no wearables required.
+PROBLEM OVERVIEW
+The Hidden Risk in Every Rep
+Gym injuries rarely happen without warning. Mechanical instability and 
+fatigue -induced form breakdown appear before visible failure —but 
+human supervision can't catch these subtle changes consistently.
+Current approaches fall short:
+•Human trainers provide limited, reactive supervision
+•Camera systems raise privacy concerns in shared spaces
+•Wearables are impractical for multi -user gym environments
+The gap: No real -time hardware system exists that monitors equipment -
+level data to detect approaching failure risk.
+
+OBJECTIVE
+Building a Smarter Safety System
+Early Detection
+Identify fatigue -induced instability 
+during workouts before injury 
+occurs
+Privacy -First Design
+Eliminate camera -based 
+monitoring and wearable 
+dependency
+Embedded Solution
+Deploy low -cost, reliable hardware 
+that integrates directly into 
+equipment
+Our approach leverages force sensors and real -time analysis to detect biomechanical changes that signal approaching 
+failure—transforming gym equipment into intelligent safety monitors.
+System Architecture Overview
+01
+Force Measurement
+Load cell captures applied force with precision strain gauge technology
+02
+Signal Amplification
+HX711 amplifier conditions and digitizes analog sensor signals
+03
+Real -Time Processing
+Microcontroller analyzes force patterns and detects anomalies
+04
+User Feedback
+Visual and auditory alerts communicate risk levels instantly
+HARDWARE
+Core Components
+Load Cell Sensor
+High -precision strain gauge 
+measures applied force 
+across the full range of 
+exercise motion
+HX711 Amplifier
+24-bit ADC amplifies and 
+converts analog load cell 
+signals for digital processing
+Microcontroller
+Arduino or ESP32 executes 
+real -time analysis 
+algorithms and manages 
+system logic
+Alert Interface
+RGB LEDs and buzzer 
+provide immediate visual 
+and auditory feedback to 
+users
+System Block Diagram
+Output AlertsMicrocontrollerHX711 AmpLoad Cell
+The system architecture creates a closed -loop monitoring solution: sensors capture biomechanical data, the microcontroller inter prets 
+force patterns in real -time, and feedback mechanisms alert users to detected risk states.
+DETECTION LOGIC
+Four -Stage Failure Risk Detection
+Baseline Capture
+System records first 3 –5 repetitions to establish baseline force profile, timing patterns, and curve characteristics
+Continuous Analysis
+Every subsequent rep is compared against baseline metrics to detect deviations in real -time
+Fatigue Detection
+Algorithm identifies force drop, increased rep duration, and small oscillations → Yellow Alert
+Failure Risk
+Sudden force dip and high instability trigger immediate warning → Red Alert + Buzzer
+Real -World Detection Example
+1 Reps 1–5: Normal State
+Smooth force curve, stable timing, consistent pattern → Green LED
+2 Reps 6–8: Fatigue Onset
+Slight force oscillations, longer rep duration, early instability signs → 
+Yellow LED
+3 Reps 9–10: Failure Risk
+Sudden force drop, loss of control, high variance → Red LED + Buzzer Alert
+Key insight: The system provides warning before actual mechanical failure 
+occurs, giving users time to stop safely and prevent injury.
+Advantages & Limitations
+System Advantages
+Real -Time Monitoring
+Continuous analysis during every repetition
+Privacy -Safe
+No cameras or visual recording required
+Wearable -Free
+Works seamlessly in shared gym environments
+Low Cost Deployment
+Affordable components enable wide adoption
+Preventive Approach
+Detects risk before injury occursCurrent Limitations
+Scope Boundary
+Does not diagnose specific muscle injuries or medical 
+conditions
+Risk Detection
+Identifies failure risk patterns, not exact failure repetition 
+number
+System Role
+Assists safety monitoring but does not replace professional 
+training guidance
+SUMMARY
+Preventing Injuries Through 
+Intelligent Detection
+Injuries do not occur suddenly. Mechanical instability appears first —our embedded system 
+detects this critical early phase.
+Target Applications
+• College and university fitness centers
+• Beginner training zones
+• Rehabilitation facilities
+• Safety -focused commercial gyms
+Core Impact
+Result: Reduced injury risk through equipment -level monitoring that provides reliable, real -
+time safety alerts without intrusive surveillance or wearable requirements.
